@@ -11,37 +11,32 @@ import java.util.Date;
  *
  * @author Leonardo
  */
-public class Employee {
+public class Client {
     
     private long id;
     private String name;
     private String cpf;
     private String rg;
     private Integer phoneNumber;
-    private Date adimissionDate;
     private Date dateOfBirth;
-    private Date resignationDate;
     private Boolean status;
     private Address address;
-    private JobRole jobRole;
+    private String email;
     
-    //contructors
-
-    public Employee(long id, String name, String cpf, String rg, Integer phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
+    //constructors
+    public Client(long id, String name, String cpf, String rg, Integer phoneNumber, Date dateOfBirth, Boolean status, Address address, String email) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.rg = rg;
         this.phoneNumber = phoneNumber;
-        this.adimissionDate = adimissionDate;
         this.dateOfBirth = dateOfBirth;
-        this.resignationDate = resignationDate;
         this.status = status;
         this.address = address;
-        this.jobRole = jobRole;
+        this.email = email;
     }
 
-    public Employee() {
+    public Client() {
     }
     
     //getters and setters
@@ -86,28 +81,12 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getAdimissionDate() {
-        return adimissionDate;
-    }
-
-    public void setAdimissionDate(Date adimissionDate) {
-        this.adimissionDate = adimissionDate;
-    }
-
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-    }
-
-    public Date getResignationDate() {
-        return resignationDate;
-    }
-
-    public void setResignationDate(Date resignationDate) {
-        this.resignationDate = resignationDate;
     }
 
     public Boolean getStatus() {
@@ -126,15 +105,12 @@ public class Employee {
         this.address = address;
     }
 
-    public JobRole getJobRole() {
-        return jobRole;
+    public String getEmail() {
+        return email;
     }
 
-    public void setJobRole(JobRole jobRole) {
-        this.jobRole = jobRole;
+    public void setEmail(String email) {
+        this.email = email;
     }
     
-    
-    
-   
 }
