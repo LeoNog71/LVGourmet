@@ -5,6 +5,7 @@
  */
 package com.mycompany.Repository.Interfaces;
 
+import com.mycompany.Model.Permission;
 import com.mycompany.Model.User;
 import java.util.List;
 
@@ -19,4 +20,5 @@ public interface IUserDAO {
     public User load(Integer code);
     public User findPerLogin(String login);
     public List<User> listAll();
+    public List<User> listPerPermisson(Permission permission);
 }

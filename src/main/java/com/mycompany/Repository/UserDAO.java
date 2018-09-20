@@ -6,6 +6,7 @@
 package com.mycompany.Repository;
 
 import com.mycompany.LVGourmet.SaveBean;
+import com.mycompany.Model.Permission;
 import com.mycompany.Model.User;
 import com.mycompany.Repository.Conection.ConexaoHibernate;
 import com.mycompany.Repository.Interfaces.IUserDAO;
@@ -80,6 +81,11 @@ public class UserDAO implements IUserDAO{
         javax.persistence.Query query = manager.createQuery(jpql);
         List<User> objects = query.getResultList();
         return objects;
+    }
+
+    @Override
+    public List<User> listPerPermisson(Permission permission) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
