@@ -6,21 +6,48 @@
 package com.mycompany.Model;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "clients")
 public class Client {
-    
+
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(length = 60, nullable = false)
     private String name;
+    
+    @Column(nullable = false)
     private String cpf;
+    
+    @Column(nullable = false)
     private String rg;
+    
+    @Column(nullable = false)
     private Integer phoneNumber;
+    
+    @Column(nullable = false)
     private Date dateOfBirth;
+    
+    
     private Boolean status;
+    
+    @Column(nullable = false)
+    @OneToMany
     private Address address;
+    
+    @Column(nullable = false)
     private String email;
     
     //constructors

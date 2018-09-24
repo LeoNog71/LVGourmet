@@ -5,17 +5,37 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "adresses")
 public class Address {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private String street;
+    
+    @Column(nullable = false)
     private Integer number;
+    
+    @Column(nullable = false)
     private String district;
+    
+    @Column(nullable = false)
     private String State;
+    
+    @Column(nullable = false)
     private String country;
     
     //contructors

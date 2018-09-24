@@ -5,14 +5,28 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "permissions")
 public class Permission {
-
+    
+    @Id
+    @GeneratedValue
     private long Id;
+    
+    @Column(length = 60, nullable = false)
     private String permission;
+    
+    @Column(length = 60, nullable = false)
     private String description;
     
     //constructors

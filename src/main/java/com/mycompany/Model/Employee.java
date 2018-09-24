@@ -6,23 +6,55 @@
 package com.mycompany.Model;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@javax.persistence.Table(name= "employees")
 public class Employee {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(length = 60, nullable = false)
     private String name;
+    
+    @Column( nullable = false)
     private String cpf;
+    
+    @Column( nullable = false)
     private String rg;
+    
+    @Column( nullable = false)
     private Integer phoneNumber;
+    
+    
     private Date adimissionDate;
+    
+    
     private Date dateOfBirth;
+    
+    
     private Date resignationDate;
+    
+    @Column( nullable = false)
     private Boolean status;
+    
+    @Column( nullable = false)
+    @OneToMany
     private Address address;
+    
+    @Column( nullable = false)
+    @OneToOne
     private JobRole jobRole;
     
     //contructors

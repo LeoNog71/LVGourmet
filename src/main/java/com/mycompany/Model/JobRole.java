@@ -5,14 +5,28 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "job_roles")
 public class JobRole {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private String jobRole;
+    
+    @Column(nullable = false)
     private String description;
     
     //contructors

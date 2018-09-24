@@ -5,25 +5,40 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name= "users")
 public class User {
     
     @Id
     @GeneratedValue
     private Integer id;
+    
+    @Column(length = 60, nullable = false)
     private String login;
-    @org.hibernate.annotations.NaturalId 
+    
+    @Column(length = 60, nullable = false)
     private String password;
+    
     private Boolean status;
     
+    @Column(nullable = false)
+    @OneToMany
     private Permission permisson;
     
+    @Column( nullable = false)
+    @OneToOne
     private Employee employee;
     
     //constructor
