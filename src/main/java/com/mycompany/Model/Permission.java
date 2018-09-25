@@ -26,13 +26,18 @@ public class Permission {
     @Column(length = 60, nullable = false)
     private String permission;
     
-    @Column(length = 60, nullable = false)
+    @Column(length = 60, nullable = true)
     private String description;
     
     //constructors
 
     public Permission(long Id, String permission, String description) {
         this.Id = Id;
+        this.permission = permission;
+        this.description = description;
+    }
+    public Permission( String permission, String description) {
+        
         this.permission = permission;
         this.description = description;
     }

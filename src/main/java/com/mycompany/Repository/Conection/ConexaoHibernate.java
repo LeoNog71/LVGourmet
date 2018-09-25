@@ -34,7 +34,7 @@ public class ConexaoHibernate {
                 if (manager == null) {
 
                     try {
-                        factory = Persistence.createEntityManagerFactory("tds");
+                        factory = Persistence.createEntityManagerFactory("jsh_gourmet");
                         manager = factory.createEntityManager ();
                     } catch(HibernateException he)
                     {

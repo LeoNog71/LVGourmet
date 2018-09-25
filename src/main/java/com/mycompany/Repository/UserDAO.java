@@ -12,6 +12,9 @@ import com.mycompany.Repository.Conection.ConexaoHibernate;
 import com.mycompany.Repository.Interfaces.IUserDAO;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 import org.hibernate.Session;
 
 /**
@@ -69,7 +72,7 @@ public class UserDAO implements IUserDAO{
 
     @Override
     public User findPerLogin(String login) {
-        String hql = "select u from Usuario u where u.login = :login";
+        String hql = "select u from users u where u.login = :login";
         javax.persistence.Query consulta = this.manager.createQuery(hql);
         consulta.setParameter("login", login);
         return (User) consulta.getSingleResult();
@@ -77,10 +80,10 @@ public class UserDAO implements IUserDAO{
 
     @Override
     public List<User> listAll() {
-        String jpql = "select u from Usuario u";
-        javax.persistence.Query query = manager.createQuery(jpql);
+        TypedQuery<User> query = this.manager.createQuery("from User U ", User.class);
         List<User> objects = query.getResultList();
         return objects;
+        
     }
 
     @Override
