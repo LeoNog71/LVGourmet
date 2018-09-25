@@ -5,14 +5,28 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "flavor_portions")
 public class FlavorPortion {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(length = 60, nullable = false)
     private String name;
+    
+    @Column(nullable = false)
     private Boolean disponible;
     
     //contructors

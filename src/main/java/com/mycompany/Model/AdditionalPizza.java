@@ -5,15 +5,34 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "additional_pizzas")
 public class AdditionalPizza {
+
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private Double price;
+    
+    @Column(nullable = false)
     private String name;
+    
+    @Column(length = 60,nullable = false)
     private String descripition;
+    
+    @Column(nullable = false)
     private Boolean disponible;
     
     //contructors

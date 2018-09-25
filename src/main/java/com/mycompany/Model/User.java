@@ -5,10 +5,13 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -23,7 +26,7 @@ public class User {
     
     @Id
     @GeneratedValue
-    private Integer id;
+    private long id;
     
     @Column(length = 60, nullable = false)
     private String login;
@@ -33,16 +36,14 @@ public class User {
     
     private Boolean status;
     
-    @Column(nullable = false)
-    @OneToMany
+    @ManyToOne
     private Permission permisson;
     
-    @Column( nullable = false)
-    @OneToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private Employee employee;
     
     //constructor
-    public User(Integer id, String login, String password, Boolean status, Permission permisson, Employee employee) {
+    public User(long id, String login, String password, Boolean status, Permission permisson, Employee employee) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -56,11 +57,11 @@ public class User {
     
     
     //geters and seters
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

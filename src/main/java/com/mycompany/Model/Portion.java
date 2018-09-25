@@ -5,16 +5,30 @@
  */
 package com.mycompany.Model;
 
+
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+
+@Entity
+@Table(name = "portions")
 public class Portion extends Products{
     
+    @ManyToOne
     private FlavorPortion flavorPortion;
+    
+    @Column(length = 60,nullable = false)
     private String descripition;
+    
+    @ManyToMany
     private List<AddtionalPortion> additionalPortion;
     
     //contructors

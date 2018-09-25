@@ -5,18 +5,43 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "products")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Products {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(length = 60, nullable = false)
     private String name;
+        
+    @Column(length = 60, nullable = false)
     private String brand;
+    
+    @Column(length = 60, nullable = false)
     private String type;
+    
+    @Column(nullable = false)
     private Integer stockQuantity;
+    
+    @Column(nullable = false)
     private Double salePrice;
+    
+    @Column(nullable = false)
     private Double purchasePrice;
     
     //contructors

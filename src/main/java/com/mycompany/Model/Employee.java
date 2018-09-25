@@ -6,10 +6,13 @@
 package com.mycompany.Model;
 
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -49,12 +52,10 @@ public class Employee {
     @Column( nullable = false)
     private Boolean status;
     
-    @Column( nullable = false)
-    @OneToMany
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private Address address;
     
-    @Column( nullable = false)
-    @OneToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private JobRole jobRole;
     
     //contructors

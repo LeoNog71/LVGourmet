@@ -6,16 +6,30 @@
 package com.mycompany.Model;
 
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name ="pizzas")
 public class Pizza extends Products{
     
+    @ManyToMany
     private List<FlavorPizza> flavorPizza;
+    
+    @Column(length = 60, nullable = false)
     private String descripition;
+    
+    @ManyToMany
     private List<AdditionalPizza> additionalPizza;
+    
+    @Column(length = 60, nullable = false)
     private String size;
     //contructors
 
