@@ -37,6 +37,12 @@ public class FlavorPizza {
         this.disponible = disponible;
     }
 
+    public FlavorPizza(String name, Boolean disponible) {
+        this.name = name;
+        this.disponible = disponible;
+    }
+    
+
     public FlavorPizza() {
     }
     

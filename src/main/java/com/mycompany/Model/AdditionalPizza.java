@@ -45,6 +45,14 @@ public class AdditionalPizza {
         this.disponible = disponible;
     }
 
+    public AdditionalPizza(Double price, String name, String descripition, Boolean disponible) {
+        this.price = price;
+        this.name = name;
+        this.descripition = descripition;
+        this.disponible = disponible;
+    }
+    
+
     public AdditionalPizza() {
     }
     

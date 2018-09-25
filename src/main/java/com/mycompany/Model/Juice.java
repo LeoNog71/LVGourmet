@@ -31,6 +31,13 @@ public class Juice extends Products{
         this.volume = volume;
         this.flavorJuice = flavorJuice;
     }
+
+    public Juice(Double volume, FlavorJuice flavorJuice, String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        super(name, brand, type, stockQuantity, salePrice, purchasePrice);
+        this.volume = volume;
+        this.flavorJuice = flavorJuice;
+    }
+    
     
 
     public Juice() {

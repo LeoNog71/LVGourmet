@@ -6,6 +6,7 @@
 package com.mycompany.MAIN;
 
 import com.mycompany.Model.Permission;
+import com.mycompany.Model.User;
 import com.mycompany.Repository.PermissionDAO;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,10 @@ import javax.persistence.Persistence;
 public class Main {
     
     public static void main(String[] args) {
+        
         Persistence.createEntityManagerFactory("jsh_gourmet");
+        
+       
         
         Permission p1 = new Permission("SUPERADMIN", "JSVGOURMET TEAM");
         Permission p2 = new Permission("ADMIN", "TI CLIENT");
@@ -39,6 +43,7 @@ public class Main {
         for(Permission p : pl){
             pdao.save(p);
         }
+         
         
     }
 

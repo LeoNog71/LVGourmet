@@ -45,6 +45,13 @@ public class Sale {
         this.Description = Description;
     }
 
+    public Sale(Double value, Employee employee, Client client, String Description) {
+        this.value = value;
+        this.employee = employee;
+        this.client = client;
+        this.Description = Description;
+    }
+    
     public Sale() {
     }
     

@@ -50,6 +50,13 @@ public class Request {
         this.produtos = produtos;
     }
 
+    public Request(Double total, Date orderTime, Boolean status, List<Products> produtos) {
+        this.total = total;
+        this.orderTime = orderTime;
+        this.status = status;
+        this.produtos = produtos;
+    }
+    
     public Request() {
     }
     

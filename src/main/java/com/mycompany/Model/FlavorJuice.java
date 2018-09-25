@@ -34,6 +34,12 @@ public class FlavorJuice {
         this.name = name;
     }
 
+    public FlavorJuice(String name, Boolean disponible) {
+        this.name = name;
+        this.disponible = disponible;
+    }
+    
+
     public FlavorJuice() {
     }
     

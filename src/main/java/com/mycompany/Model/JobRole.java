@@ -37,6 +37,11 @@ public class JobRole {
         this.description = description;
     }
 
+    public JobRole(String jobRole, String description) {
+        this.jobRole = jobRole;
+        this.description = description;
+    }
+    
     public JobRole() {
     }
     

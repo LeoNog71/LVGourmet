@@ -56,6 +56,16 @@ public class Delivery {
         this.requests = requests;
     }
 
+    public Delivery(Integer number, Boolean status, Double total, Client client, Employee employee, List<Request> requests) {
+        this.number = number;
+        this.status = status;
+        this.total = total;
+        this.client = client;
+        this.employee = employee;
+        this.requests = requests;
+    }
+    
+    
     
     public Delivery() {
     }

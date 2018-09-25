@@ -56,6 +56,15 @@ public class Products {
         this.purchasePrice = purchasePrice;
     }
 
+    public Products(String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        this.name = name;
+        this.brand = brand;
+        this.type = type;
+        this.stockQuantity = stockQuantity;
+        this.salePrice = salePrice;
+        this.purchasePrice = purchasePrice;
+    }
+    
     public Products() {
     }
     

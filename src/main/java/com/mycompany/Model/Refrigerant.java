@@ -26,6 +26,11 @@ public class Refrigerant extends Products{
         this.volume = volume;
     }
 
+    public Refrigerant(Double volume, String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        super(name, brand, type, stockQuantity, salePrice, purchasePrice);
+        this.volume = volume;
+    }
+    
     public Refrigerant() {
         
     }

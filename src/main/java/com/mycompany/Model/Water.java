@@ -30,6 +30,12 @@ public class Water extends Products{
         this.gas = gas;
     }
 
+    public Water(Double volume, Boolean gas, String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        super(name, brand, type, stockQuantity, salePrice, purchasePrice);
+        this.volume = volume;
+        this.gas = gas;
+    }
+    
     public Water() {
     }
     

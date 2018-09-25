@@ -45,6 +45,14 @@ public class AddtionalPortion {
         this.disponible = disponible;
     }
 
+    public AddtionalPortion(Double price, String name, String descripition, Boolean disponible) {
+        this.price = price;
+        this.name = name;
+        this.descripition = descripition;
+        this.disponible = disponible;
+    }
+    
+
     public AddtionalPortion() {
     }
     

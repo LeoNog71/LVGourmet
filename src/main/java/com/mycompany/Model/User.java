@@ -51,6 +51,15 @@ public class User {
         this.permisson = permisson;
         this.employee = employee;
     }
+
+    public User(String login, String password, Boolean status, Permission permisson, Employee employee) {
+        this.login = login;
+        this.password = password;
+        this.status = status;
+        this.permisson = permisson;
+        this.employee = employee;
+    }
+    
     public User(){
         
     }

@@ -48,6 +48,15 @@ public class Address {
         this.country = country;
     }
 
+    public Address(String street, Integer number, String district, String State, String country) {
+        this.street = street;
+        this.number = number;
+        this.district = district;
+        this.State = State;
+        this.country = country;
+    }
+    
+
     public Address() {
     }
     

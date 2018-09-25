@@ -66,6 +66,19 @@ public class Client {
         this.email = email;
     }
 
+    public Client(String name, String cpf, String rg, Integer phoneNumber, Date dateOfBirth, Boolean status, Address address, String email) {
+        this.name = name;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
+        this.status = status;
+        this.address = address;
+        this.email = email;
+    }
+    
+    
+    
     public Client() {
     }
     

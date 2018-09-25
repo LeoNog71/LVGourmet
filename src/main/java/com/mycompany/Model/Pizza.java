@@ -41,6 +41,14 @@ public class Pizza extends Products{
         this.size = size;
     }
 
+    public Pizza(List<FlavorPizza> flavorPizza, String descripition, List<AdditionalPizza> additionalPizza, String size, String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        super(name, brand, type, stockQuantity, salePrice, purchasePrice);
+        this.flavorPizza = flavorPizza;
+        this.descripition = descripition;
+        this.additionalPizza = additionalPizza;
+        this.size = size;
+    }
+    
    
 
     public Pizza() {

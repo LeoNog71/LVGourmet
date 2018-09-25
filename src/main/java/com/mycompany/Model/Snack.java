@@ -38,6 +38,13 @@ public class Snack extends Products{
         this.additionalSnack = additionalSnack;
     }
 
+    public Snack(FlavorSnack flavorSnack, String descripition, List<AdditionalSnack> additionalSnack, String name, String brand, String type, Integer stockQuantity, Double salePrice, Double purchasePrice) {
+        super(name, brand, type, stockQuantity, salePrice, purchasePrice);
+        this.flavorSnack = flavorSnack;
+        this.descripition = descripition;
+        this.additionalSnack = additionalSnack;
+    }
+    
     public Snack() {
     }
     

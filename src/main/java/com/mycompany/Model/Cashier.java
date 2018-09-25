@@ -52,6 +52,15 @@ public class Cashier {
         this.push = push;
     }
 
+    public Cashier(List<Sale> sales, Date startDate, Date endDate, Double total, Double push) {
+        this.sales = sales;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.total = total;
+        this.push = push;
+    }
+    
+
     public Cashier() {
     }
     

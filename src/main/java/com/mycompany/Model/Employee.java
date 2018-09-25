@@ -74,6 +74,21 @@ public class Employee {
         this.jobRole = jobRole;
     }
 
+    public Employee(String name, String cpf, String rg, Integer phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
+        this.name = name;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.phoneNumber = phoneNumber;
+        this.adimissionDate = adimissionDate;
+        this.dateOfBirth = dateOfBirth;
+        this.resignationDate = resignationDate;
+        this.status = status;
+        this.address = address;
+        this.jobRole = jobRole;
+    }
+    
+    
+
     public Employee() {
     }
     
