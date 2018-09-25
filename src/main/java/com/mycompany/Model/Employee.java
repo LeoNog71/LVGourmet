@@ -38,7 +38,7 @@ public class Employee {
     private String rg;
     
     @Column( nullable = false)
-    private Integer phoneNumber;
+    private String phoneNumber;
     
     
     private Date adimissionDate;
@@ -60,7 +60,7 @@ public class Employee {
     
     //contructors
 
-    public Employee(long id, String name, String cpf, String rg, Integer phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
+    public Employee(long id, String name, String cpf, String rg, String phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
@@ -74,7 +74,7 @@ public class Employee {
         this.jobRole = jobRole;
     }
 
-    public Employee(String name, String cpf, String rg, Integer phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
+    public Employee(String name, String cpf, String rg, String phoneNumber, Date adimissionDate, Date dateOfBirth, Date resignationDate, Boolean status, Address address, JobRole jobRole) {
         this.name = name;
         this.cpf = cpf;
         this.rg = rg;
@@ -126,11 +126,11 @@ public class Employee {
         this.rg = rg;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

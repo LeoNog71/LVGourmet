@@ -31,7 +31,7 @@ public class User {
     @Column(length = 60, nullable = false)
     private String login;
     
-    @Column(length = 60, nullable = false)
+    @Column( nullable = false)
     private String password;
     
     private Boolean status;

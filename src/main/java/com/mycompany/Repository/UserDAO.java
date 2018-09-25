@@ -45,7 +45,7 @@ public class UserDAO implements IUserDAO{
         this.manager.persist(user);
         this.manager.flush();
         this.manager.getTransaction().commit();
-        new SaveBean().showMessage();
+//        new SaveBean().showMessage();
     }
 
     @Override
