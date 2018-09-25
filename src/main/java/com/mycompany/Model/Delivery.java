@@ -6,18 +6,42 @@
 package com.mycompany.Model;
 
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "deliveries")
 public class Delivery {
-     private long id;
+    
+    @Id
+    @GeneratedValue
+    private long id;
+    
+    @Column(nullable = false)
     private Integer number;
+    
+    @Column(nullable = false)
     private Boolean status;
+    
+    @Column(nullable = false)
     private Double total;
+    
+    @ManyToOne
     private Client client;
+    
+    @ManyToOne
     private Employee employee;
+    
+    @ManyToMany
     private List<Request> requests;
     
     //contructors

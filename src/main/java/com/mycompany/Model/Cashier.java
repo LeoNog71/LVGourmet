@@ -7,18 +7,38 @@ package com.mycompany.Model;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "cashiers")
 public class Cashier {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @ManyToMany
     private List<Sale> sales;
+    
+    @Column(nullable = false)
     private Date startDate;
+    
+    @Column(nullable = false)
     private Date endDate;
+    
+    @Column(nullable = false)
     private Double total;
+    
+    @Column(nullable = false)
     private Double push;
     
     //contructors

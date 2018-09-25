@@ -7,17 +7,37 @@ package com.mycompany.Model;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "requests")
 public class Request {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private Double total;
+    
+    @Column(nullable = false)
     private Date orderTime;
+    
+    @Column(nullable = false)
     private Boolean status;
+    
+    @ManyToMany
     private List<Products> produtos;
     
     //contructors

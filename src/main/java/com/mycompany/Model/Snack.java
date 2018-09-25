@@ -6,15 +6,27 @@
 package com.mycompany.Model;
 
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name ="snacks")
 public class Snack extends Products{
     
+    @ManyToOne
     private FlavorSnack flavorSnack;
+    
+    @Column(length = 60,nullable = false)
     private String descripition;
+    
+    @ManyToMany
     private List<AdditionalSnack> additionalSnack;
     
     //constructors

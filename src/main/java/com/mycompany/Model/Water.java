@@ -5,13 +5,22 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "waters")
 public class Water extends Products{
     
+    @Column(nullable = false)
     private Double volume;
+    
+    @Column(nullable = false)
     private Boolean gas;
     
     //constructors

@@ -6,24 +6,47 @@
 package com.mycompany.Model;
 
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Leonardo
  */
-public class Table {
+@Entity
+@Table(name = "tables")
+public class Tables {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private Integer number;
+    
+    @Column(nullable = false)
     private Boolean status;
+    
+    @Column(nullable = false)
     private Double total;
+    
+    @ManyToOne
     private Client client;
+    
+    @ManyToOne
     private Employee employee;
+    
+    @ManyToMany
     private List<Request> requests;
     
     //contructors
 
-    public Table(long id, Integer number, Boolean status, Double total, Client client, Employee employee, List<Request> requests) {
+    public Tables(long id, Integer number, Boolean status, Double total, Client client, Employee employee, List<Request> requests) {
         this.id = id;
         this.number = number;
         this.status = status;
@@ -34,7 +57,7 @@ public class Table {
     }
 
     
-    public Table() {
+    public Tables() {
     }
     
     //getters and setters

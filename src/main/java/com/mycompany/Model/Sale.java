@@ -5,16 +5,35 @@
  */
 package com.mycompany.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 /**
  *
  * @author Leonardo
  */
+@Entity
+@Table(name = "value")
 public class Sale {
     
+    @Id
+    @GeneratedValue
     private long id;
+    
+    @Column(nullable = false)
     private Double value;
+    
+    @ManyToOne
     private Employee employee;
+    
+    @ManyToOne
     private Client client;
+    
+    @Column(nullable = false)
     private String Description;
     
     //contructors
