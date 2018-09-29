@@ -18,7 +18,7 @@ public class SaveBean {
          
     public void showMessage() {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "SALVO", "COM SUCESSO!");
-         
+         ///
         PrimeFaces.current().dialog().showMessageDynamic(message);
     }
 }
