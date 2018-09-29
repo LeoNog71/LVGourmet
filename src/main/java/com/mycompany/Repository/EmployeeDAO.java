@@ -31,6 +31,7 @@ public class EmployeeDAO implements IEmployee{
         this.manager.persist(employee);
         this.manager.flush();
         this.manager.getTransaction().commit();
+        this.manager.close();
 //        new SaveBean().showMessage();
     }
 

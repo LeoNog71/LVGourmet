@@ -45,6 +45,7 @@ public class UserDAO implements IUserDAO{
         this.manager.persist(user);
         this.manager.flush();
         this.manager.getTransaction().commit();
+        this.manager.close();
 //        new SaveBean().showMessage();
     }
 
@@ -72,10 +73,11 @@ public class UserDAO implements IUserDAO{
 
     @Override
     public User findPerLogin(String login) {
-        String hql = "select u from users u where u.login = :login";
-        javax.persistence.Query consulta = this.manager.createQuery(hql);
+        String hql = "select u from User u where u.login = :login";
+        TypedQuery<User> consulta = this.manager.createQuery(hql,User.class);
         consulta.setParameter("login", login);
-        return (User) consulta.getSingleResult();
+        User users = consulta.getSingleResult();
+        return users;
     }
 
     @Override

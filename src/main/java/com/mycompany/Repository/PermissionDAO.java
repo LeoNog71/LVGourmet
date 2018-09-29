@@ -33,6 +33,7 @@ public class PermissionDAO implements IPermissionsDAO{
         this.manager.persist(permission);
         this.manager.flush();
         this.manager.getTransaction().commit();
+        this.manager.close();
     }
 
     @Override
