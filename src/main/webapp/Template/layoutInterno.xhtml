@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title><ui:insert name="titulo"></ui:insert></title>
+    </h:head>
+    <h:body>
+        <div id="container">
+            <div id="barra_menu">
+                <ui:insert name="menuBar">
+                    <ui:include src="/administrativo/menu_principal.xhtml"/> 
+                </ui:insert>
+            </div>
+            <p:layout style="min-width:400px;min-height:200px;">
+                <p:layoutUnit position="west" resizable="true" size="100" minSize="40" maxSize="200">
+
+                    <ui:insert name="menu_lateral"/> 
+
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                    <div id="corpo">
+                        <ui:insert name="corpo"/> 
+                    </div>
+                </p:layoutUnit>
+            </p:layout>
+
+            <div id="rodape">
+                <ui:insert name="rodape">
+                    <ui:include src="/rodape.xhtml"/> 
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+</html>
